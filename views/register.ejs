@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Register</title>
+</head>
+<body bgcolor="pink">
+    <% if(errors) { %>
+        <ul>
+        <% for(let i = 0;i<errors.length;i++) {  %>
+            <li style="color: red"><%=errors[i].msg %></li>
+            <% }%>
+        </ul>
+    <% }  %>
+    <center>
+            <form action="/register" method="POST">
+            <input type="text" name = "username" placeholder="Username"><hr>
+            <input type="text" name = "email" placeholder="E-mail"><hr>
+            <input type="password" name = "password" placeholder="Password"><hr>
+            <input type="password" name = "confirm-password" placeholder="Password Confirmation"><hr>
+            <input type="submit" name="submit"><hr>
+        </form>
+    </center>
+</body>
+</html>

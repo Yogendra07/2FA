@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Create a New Blog</title>
+</head>
+<body bgcolor="pink">
+    <% if(errors) { %>
+        <ul>
+        <% for(let i = 0;i<errors.length;i++) {  %>
+            <li style="color: red"><%=errors[i].msg %></li>
+            <% }%>
+        </ul>
+    <% }  %>
+    <form action="/blog/create" method="POST">
+        <input type="text" name = "title" placeholder="Enter a blog title"><hr>
+        <textarea name="description" placeholder="Enter a blog Description" cols="60" rows="20"></textarea><hr>
+        <input type="submit" name="submit"><hr>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Login</title>
+</head>
+<body bgcolor="pink">
+    <% if(errors) { %>
+        <ul>
+        <% for(let i = 0;i<errors.length;i++) {  %>
+            <li style="color: red"><%=errors[i].msg %></li>
+            <% }%>
+        </ul>
+    <% }  %>
+    <form action="/login" method="POST">
+        <input type="text" name = "username_email" placeholder="Username or E-mail"><hr>
+        <input type="password" name = "password" placeholder="Password"><hr>
+        <input id = "remember_me" type="checkbox" name = "remember_me" value="true">
+        <label for="remember_me">Remember_me</label><br>
+        <input type="submit" name="submit"><hr>
+    </form>
+</body>
+</html>
